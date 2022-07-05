@@ -30,12 +30,10 @@ class eye_blink_detector():
         if ear < cfg.EYE_AR_THRESH:
             COUNTER += 1
             
-     
         else:
       
             if COUNTER >= cfg.EYE_AR_CONSEC_FRAMES:
                 TOTAL += 1
-            # reset the eye frame counter
             COUNTER = 0
         return COUNTER,TOTAL
 
